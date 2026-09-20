@@ -106,20 +106,20 @@
 </head>
 <body class="bg-md-surface dark:bg-md-surfaceDark text-gray-900 dark:text-gray-100 min-h-screen flex flex-col pb-24 md:pb-0 transition-colors duration-200 overflow-x-hidden">
 
-    <header class="sticky top-0 z-30 bg-md-surfaceContainerLow/90 dark:bg-md-surfaceContainerDark/90 backdrop-blur-md border-b border-md-outlineVariant/30 dark:border-md-outlineVariantDark/30 px-3 sm:px-6 py-2.5 transition-colors">
-        <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
+    <header class="sticky top-0 z-30 bg-md-surfaceContainerLow/90 dark:bg-md-surfaceContainerDark/90 backdrop-blur-md border-b border-md-outlineVariant/30 dark:border-md-outlineVariantDark/30 px-2.5 sm:px-6 py-2 transition-colors">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-1.5 sm:gap-4">
             
             <!-- Brand & Product Title -->
-            <div class="flex items-center gap-2.5 cursor-pointer shrink-0" onclick="switchTab('dashboard')">
-                <div class="w-10 h-10 rounded-[14px] bg-gradient-to-tr from-md-primary to-indigo-600 text-white flex items-center justify-center font-bold shadow-xs shrink-0">
-                    <i class="fa-solid fa-bolt-lightning text-lg"></i>
+            <div class="flex items-center gap-2 sm:gap-2.5 cursor-pointer shrink-0" onclick="switchTab('dashboard')">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-[12px] sm:rounded-[14px] bg-gradient-to-tr from-md-primary to-indigo-600 text-white flex items-center justify-center font-bold shadow-xs shrink-0">
+                    <i class="fa-solid fa-bolt-lightning text-sm sm:text-lg"></i>
                 </div>
                 <div class="flex flex-col">
                     <div class="flex items-center gap-1">
-                        <span class="font-bold text-base sm:text-lg tracking-tight flex items-center text-gray-900 dark:text-white">
+                        <span class="font-bold text-sm sm:text-lg tracking-tight flex items-center text-gray-900 dark:text-white">
                             Lend<span class="text-md-primary">Pulse</span>
                         </span>
-                        <span class="text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-md-primaryContainer text-md-onPrimaryContainer font-sans">OS</span>
+                        <span class="text-[8px] sm:text-[9px] uppercase font-bold tracking-wider px-1.5 sm:px-2 py-0.5 rounded-full bg-md-primaryContainer text-md-onPrimaryContainer font-sans">OS</span>
                     </div>
                     <span class="text-[10px] text-gray-500 dark:text-gray-400 font-medium hidden sm:inline">Capital & Loan Manager</span>
                 </div>
@@ -135,10 +135,10 @@
             </div>
 
             <!-- MD3 Top App Actions (Currency, Language, Dark Theme, Clear Data) -->
-            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            <div class="flex items-center gap-1 sm:gap-2 shrink-0">
                 <!-- Currency Selector -->
                 <div class="relative">
-                    <select id="currency-select" onchange="changeCurrency(this.value)" class="appearance-none min-h-[38px] bg-md-surfaceContainer dark:bg-md-surfaceContainerHighDark hover:bg-gray-200 dark:hover:bg-gray-700 text-[11px] font-semibold pl-2.5 pr-6 py-1.5 rounded-xl border-0 cursor-pointer outline-none transition">
+                    <select id="currency-select" onchange="changeCurrency(this.value)" class="appearance-none h-8 sm:h-10 bg-md-surfaceContainer dark:bg-md-surfaceContainerHighDark hover:bg-gray-200 dark:hover:bg-gray-700 text-[10px] sm:text-[11px] font-semibold pl-2 pr-5 sm:pl-2.5 sm:pr-6 py-1 rounded-xl border-0 cursor-pointer outline-none transition">
                         <option value="USD">$ USD</option>
                         <option value="INR" selected>₹ INR</option>
                         <option value="EUR">€ EUR</option>
@@ -146,12 +146,12 @@
                         <option value="AED">AED</option>
                         <option value="BRL">R$ BRL</option>
                     </select>
-                    <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-[8px] text-gray-400 pointer-events-none"></i>
+                    <i class="fa-solid fa-chevron-down absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 text-[8px] text-gray-400 pointer-events-none"></i>
                 </div>
 
                 <!-- Language Selector -->
                 <div class="relative">
-                    <select id="lang-select" onchange="changeLanguage(this.value)" class="appearance-none min-h-[38px] bg-md-surfaceContainer dark:bg-md-surfaceContainerHighDark hover:bg-gray-200 dark:hover:bg-gray-700 text-[11px] font-semibold pl-2.5 pr-6 py-1.5 rounded-xl border-0 cursor-pointer outline-none transition">
+                    <select id="lang-select" onchange="changeLanguage(this.value)" class="appearance-none h-8 sm:h-10 bg-md-surfaceContainer dark:bg-md-surfaceContainerHighDark hover:bg-gray-200 dark:hover:bg-gray-700 text-[10px] sm:text-[11px] font-semibold pl-2 pr-5 sm:pl-2.5 sm:pr-6 py-1 rounded-xl border-0 cursor-pointer outline-none transition">
                         <option value="en">EN</option>
                         <option value="hi">HI</option>
                         <option value="te">TE</option>
@@ -162,17 +162,17 @@
                         <option value="ar">AR</option>
                         <option value="pt">PT</option>
                     </select>
-                    <i class="fa-solid fa-language absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-gray-400 pointer-events-none"></i>
+                    <i class="fa-solid fa-language absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 text-[10px] text-gray-400 pointer-events-none"></i>
                 </div>
 
                 <!-- Dark Theme Switcher Button -->
-                <button onclick="toggleDarkMode()" aria-label="Toggle Theme" class="w-10 h-10 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-md-surfaceContainer dark:hover:bg-md-surfaceContainerHighDark transition">
+                <button onclick="toggleDarkMode()" aria-label="Toggle Theme" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-md-surfaceContainer dark:hover:bg-md-surfaceContainerHighDark transition shrink-0">
                     <i class="fa-solid fa-moon dark:hidden text-xs"></i>
                     <i class="fa-solid fa-sun hidden dark:inline text-yellow-400 text-xs"></i>
                 </button>
 
                 <!-- Clear Data / Reset Button -->
-                <button onclick="openClearDataModal()" title="Clear System Data" class="w-10 h-10 rounded-full flex items-center justify-center text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/40 transition">
+                <button onclick="openClearDataModal()" title="Clear System Data" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/40 transition shrink-0">
                     <i class="fa-solid fa-trash-can text-xs"></i>
                 </button>
             </div>
